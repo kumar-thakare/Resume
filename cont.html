@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 15%;
+        background-color: rgb(216, 216, 152);
+    }
+
+    .container{
+        background-color: bisque;
+        padding: 10px;
+        margin:20px  auto;
+        border: 2px solid ;
+        border-radius: 15px;
+    }
+    .container img{
+        border: 2px solid;
+        border-radius: 50%;
+        box-shadow: 2px 2px 2px black;
+        transition: all 1.1 ease-in-out;
+    }
+
+    .container p{
+        border-left: 4px solid orange;
+        padding: 5px
+    }
+
+    .collaj{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+        
+    }   
+    
+</style>
+<body> 
+
+    
+
+    <div class="collaj">
+
+<div>
+    <div class="container">
+        <img height="250px" width="250px" src="mee.jpg" alt="png">
+    <p><B>Name :</B>Janhavi Lunge</p>
+    <hr >
+    <p> <b>Class: </b> B.C.A 1st Year</p></div>
+   <div class="container">
+     <img height="250px" width="250px" src="kumar.jpg"  alt="png">
+    <p><B>Name :</B>kumar Thakare</p>
+    <p> <b>Class: </b> B.C.A 1st Year</p></div>
+
+    <div class="container">
+    <img height="250px" width="250px" src='ruchi.jpg' alt="png"></img>
+    <p><B>Name :</B>Ruchika Thakare</p>
+    <p> <b>Class: </b> B.C.A 1st Year</p></div>
+
+    <div class="container">
+        
+         <img height="250px" width="250px" src='dhano.jpg' alt="png">
+        <p><B>Name :</B> Dhanashree Sarap</p>
+        <p> <b>Class: </b> B.C.A 1st Year</p></div>
+    
+    </div>
+
+</div>
+</div>
+</body>
+</html>
