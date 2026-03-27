@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylee.css">
+</head>
+
+<style> 
+    #menu {
+        border: 1px solid #5A5655;
+        background: #0be4d6;
+        height: 45px;
+        padding-left: 18px;
+        border-radius: 10px;
+    }
+    #menu ul, #menu li {
+        margin: 0 auto;
+        padding: 0;
+        list-style: none
+    }
+    /* #menu ul {
+        width: 70%;
+        text-align: left;
+    } */
+    #menu li {
+        display: inline-block;
+        position: relative;
+    }
+
+    #menu ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    #menu a {
+        display: block;
+        color: black;
+        border-radius: 10px;
+        line-height: 44px;
+        padding: 0 14px;
+        text-decoration: none;
+        transition: all 0.4s ease-in-out;
+        font-size: 16px;
+    }
+
+   
+    #menu a.dropdown-arrow:after {
+        content: "\25BE";
+        margin-left: 5px;
+    }
+    #menu li a:hover {
+        transition: all 0.4s ease-in-out;
+        color: #CC4D80;
+        background: #F2F2F2;
+    }
+    #menu input {
+        display: none;
+        margin: 0;
+        padding: 0;
+        height: 45px;
+        width: 100%;
+        opacity: 0;
+        cursor: pointer
+    }
+    #menu label {
+        display: none;
+        line-height: 45px;
+        text-align: center;
+        position: absolute;
+        left: 35px
+    }
+    #menu label:before {
+        font-size: 1.6em;
+        color: #FFFFFF;
+        content: "\2261"; 
+        margin-left: 20px;
+    }
+    #menu ul.sub-menus{
+        height: auto;
+        overflow: hidden;
+        width: 170px;
+        background: #5A5655;
+        border: 1px solid #5A5655;
+        border-radius: 10px;
+        position: absolute;
+        z-index: 99;
+        display: none;
+    }
+    #menu ul.sub-menus li {
+        display: block;
+        text-align: left;
+        width: 100%;
+    }
+    #menu ul.sub-menus a {
+        color: #FFEDE7;
+        font-size: 16px;
+    }
+    #menu li:hover ul.sub-menus {
+        display: block
+    }
+    #menu ul.sub-menus a:hover{
+        transition: all 0.5s ease-in-out;
+        background: #F2F2F2;
+        color: #8B8B8B;
+    }
+    @media screen and (max-width: 600px){
+        #menu {position:relative}
+        #menu ul {background:#5A5655;position:absolute;top:100%;right:0;left:0;z-index:3;height:auto;display:none;text-align:left;}
+        #menu ul.sub-menus {width:100%;position:static;}
+        #menu ul.sub-menus a {padding-left:30px;}
+        #menu li {display:block;float:none;width:auto;}
+        #menu input, #menu label {position:absolute;top:0;left:0;display:block}
+        #menu input {z-index:4}
+        #menu input:checked + label {color:#FFFFFF}
+        #menu input:checked + label:before {content:"\00d7"}
+        #menu input:checked ~ ul {display:block}
+    }
+     body{
+         background-color: #c5e0de;
+        }
+        .centered{
+            text-align: center;
+        }
+
+        .mainmenu{
+          transition: all 1.5s ease-in-out;
+          width: 650px;
+          padding: 15px;
+          margin: 100px auto;
+          margin-top: 0%;
+          margin-bottom: 0%;
+          border-radius: 20px;
+   
+}
+        
+        </style> 
+
+<body>
+    
+    <div class="head">
+        <h1  style="text-align: center;">Resume Generator</h1>        
+        </div>
+        
+        
+    <!-- MEnu barrr -->
+    <div class="mainmenu">
+        <div class="minu"><br>
+    
+            <nav id='menu'>
+          <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+          <ul>
+            <li><a href='main.html'>Resume Generator</a></li>
+            <li><a class='dropdown-arrow' href='http://'> Member</a>
+              <ul class='sub-menus'>
+                <li><a >Janhavi Lunge</a></li>
+                <li><a >Kumar Thakare </a></li>
+                <li><a >Ruchika Thakare</a></li>
+                <li><a >Danashree Sarap</a></li>
+              </ul>
+            </li>
+            <li><a href='http://'>About Group</a></li>
+            <li><a  href='New folder\cont.html'> Contact Developer</a>
+            </li>
+            
+          </ul>
+        </nav>
+        </div>
+    </div>
+
+    <div class="head">
+        <p class="direc" style="text-align: center;">To make Your Resume Fill the form below and click on submit button. </p>
+    </div>
+    
+    <div class="set"></div>
+
+
+    
+    <div class="container">
+        
+        
+        <b class="up-nam">Name</b><br>
+        <input type="text" class="inputt"  id="name"   required placeholder="Enter Your Name"><br>
+        
+        <b class="up-nam">Contacts</b><br>
+        <input type="number" class="inputt"  id="con"   required placeholder="Mobile number"><br>
+       
+        <b class="up-nam">Email</b><br>
+        <input type="email" class="inputt"  id="Email"  required placeholder="E-Mail"><br>
+       
+        <b class="up-nam">Address<br>
+        <input type="text" class="inputt"  id="Address"   placeholder="Enter Your Address"><br>
+       
+        <b class="up-nam">Skills<br>
+        <input type="text" class="inputt"  id="skills"   placeholder="Your Skills"><br>
+        
+        <b class="up-nam">Achivment<br>
+        <input type="text" class="inputt"  id="Achument"   placeholder="Your Achievements"><br>
+        
+        <b class="up-nam">Projects<br>
+        <input type="text" class="inputt"  id="proj"   placeholder="Your projects"><br>
+        
+        <b class="up-nam">Experience<br>
+        <input type="text" class="inputt"  id="exp"   placeholder="Your Achievements"><br>
+        
+        <b class="up-nam">Education<br>
+        <input type="text" class="inputt"  id="eduu"   placeholder="Your Achievements"><br>
+        
+        <button class="btn" onclick="f1()"> submit </button>
+
+        <i class="inst" style="display: none;">Scroll Down ⤵️ for Resume</i>
+        
+    </div> 
+
+    <div class="output" style="display: none;">
+
+     <h1 class="head2" style="text-align: center;">Generated Resume</h1>
+     <hr class="head2" height="2px" color="black" >
+
+
+     <div class="result">
+       
+           <strong><u>RESUME</u></strong><BR><br>
+            <b id="nam" style="font-size: 30px;"> </b> <br>
+          <!-- <strong>• Address : </strong>-->  <b id="add"></b><br>
+          <!-- <strong>• E-Mail : </strong>--> <b id="em"></b> <br>
+           <!--<strong>• Contacts : </strong>--> <b id="coon"></b> <br><br>
+           <strong>• Skills •</strong> <br> <b id="sk"></b><br>
+           <strong>• Achievements •  </strong> <br><b id="ac"></b><br>
+           <strong>• Projects •  </strong> <br><b id="pj"></b><br>
+           <strong>• Experience •  </strong><br> <b id="ex"></b><br>
+           <strong>• Education •  </strong><br> <b id="edu"></b><br>
+        </div>
+        
+    </div>
+
+        <div class="dbun" style="display: none;"> 
+            <p class="inst">Click here to download your resume ➡️</p>
+             <button class="dbun" onclick="f2()" id="res-d">DOWNLOAD Resume</button>
+
+        </div>
+
+
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+        <script>
+            document.getElementById('res-d').addEventListener('click', function () {
+                const { jsPDF } = window.jspdf;
+                const doc = new jsPDF();
+
+                const resultContent = document.querySelector('.result').innerHTML;
+                const tempDiv = document.createElement('div');
+                tempDiv.innerHTML = resultContent;
+
+                const textContent = tempDiv.textContent || tempDiv.innerText;
+                doc.text(textContent, 10, 10);
+
+                doc.save('Resume.pdf');
+            });
+        </script> -->
+    
+
+
+    <script>
+        function f1(){
+            document.querySelector('.container').style.display = 'none';
+            document.querySelector('.head').style.display = 'none';
+           
+           
+            
+        document.querySelector('.output').style.display = 'block';
+        document.querySelector('.dbun').style.display = 'flex';
+        document.querySelector('.inst').style.display = 'block';
+        document.getElementById('nam').innerHTML = document.getElementById('name').value;  
+        document.getElementById('coon').innerHTML = document.getElementById('con').value;
+        document.getElementById('em').innerHTML = document.getElementById('Email').value;
+        document.getElementById('add').innerHTML = document.getElementById('Address').value;
+        document.getElementById('edu').innerHTML = document.getElementById('eduu').value;
+        document.getElementById('sk').innerHTML = document.getElementById('skills').value;
+        document.getElementById('ac').innerHTML = document.getElementById('Achument').value;
+        document.getElementById('pj').innerHTML = document.getElementById('proj').value;
+        document.getElementById('ex').innerHTML = document.getElementById('exp').value;
+
+            if (document.getElementById('name').value === '') {
+                alert('Please fill out the Name field.');
+                return;
+            }
+            if (document.getElementById('con').value === '') {
+                alert('Please fill out the Contacts field.');
+                return;
+            }
+            if (document.getElementById('Email').value === '') {
+                alert('Please fill out the Email field.');
+                return;
+            }
+            if (document.getElementById('Address').value === '') {
+                alert('Please fill out the Address field.');
+                return;
+            }
+            if (document.getElementById('skills').value === '') {
+                alert('Please fill out the Skills field.');
+                return;
+            }
+            if (document.getElementById('Achument').value === '') {
+                alert('Please fill out the Achievements field.');
+                return;
+            }
+
+        }
+
+ function f2(){
+    document.querySelector('.dbun').style.display = 'none';
+    document.querySelector('.inst').style.display = 'none';
+    document.querySelector('.head2').style.display = 'none';
+    document.querySelector('.minu').style.display = 'none';
+    document.querySelector('.direc').style.display = 'none';
+    print();
+    
+ }
+
+
+    </script>
+
+
+
+
+
+    <!-- <script>
+        function f1() {
+            document.getElementById('res-name').innerText = document.getElementById('name').value;
+            document.getElementById('res-contact').innerText = document.querySelector('input[placeholder="Mobile number"]').value;
+            document.getElementById('res-email').innerText = document.querySelector('input[placeholder="E-Mail"]').value;
+            document.getElementById('res-address').innerText = document.querySelector('input[placeholder="name"]').value;
+            document.getElementById('res-skills').innerText = document.querySelector('input[placeholder="name"]').value;
+            document.getElementById('res-achievements').innerText = document.querySelector('input[placeholder="name"]').value;
+        }
+    </script> -->
+
+
+
+        <!-- <form action="resume.php" method="post">
+
+            <label for="name">Name:</label><br>
+            <inputtype="text" name="name" id="name" required>
+            <br>
+            <label for="email">Email:</label><br>
+            <input type="email" name="email" id="email" required>
+            <br>
+            <label for="phone">Phone:</label><br>
+            <input type="tel" name="phone" id="phone" required>
+            <br>
+            <label for="address">Address:</label><br>
+            <input type="text" name="address" id="address" required>
+            <br>
+            <label for="education">Education:</label><br>
+            <textarea name="education" id="education" cols="30" rows="10" required></textarea>
+            <br>
+            <label for="experience">Experience:</label><br>
+            <textarea name="experience" id="experience" cols="30" rows="10" required></textarea>
+            <br>
+            <label for="skills">Skills:</label><br>
+            <textarea name="skills" id="skills" cols="30" rows="10" required></textarea>
+            <br>
+            <label for="hobbies">Hobbies:</label><br>
+            <textarea name="hobbies" id="hobbies" cols="30" rows="10" required></textarea>
+            <br>
+            <input type="submit" value="Generate Resume">
+        </form>
+        -->
+</body>
+</html>

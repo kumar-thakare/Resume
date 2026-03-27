@@ -1,0 +1,214 @@
+body{
+    background-color: rgb(208, 201, 201);
+}
+
+h1{
+    margin-top: 10%;
+    font-size: 50px;
+    color: rgb(219, 219, 219);
+    text-shadow: 2px 2px 2px rgb(114, 114, 114);
+    background-color: rgb(0, 0, 0);
+    margin-top: 0;
+    border-radius: 10px;
+    border: 2px solid black;
+    animation: infinite 2s linear;
+    text-align: center;
+  
+}
+
+.head{
+    margin-top: 63;
+}
+
+
+
+.container{
+    transition: all 1.5s ease-in-out;
+    width: 500px;
+    padding: 15px;
+    background-color: azure;
+    margin: 100px auto;
+    border: 2px solid black;
+    border-radius: 20px;
+   
+}
+.container :hover{
+  transform: scale(1.1);
+  transition: all 0.6s ease-in-out;
+}
+
+.container input:hover {
+    transform: scale(1.002);
+    transition: all 0.3s ease-in-out;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border-radius: 10px;
+    font-size: large;
+}
+
+.direc{
+    color: blue;
+    font-size: 20px;
+    text-shadow: 2px 2px 2px rgb(153, 152, 152);
+
+    animation: infiniteAnimation 3s infinite;
+}
+@keyframes infiniteAnimation {
+    0% {
+        transform: scale(0.9);
+        color: rgb(0, 0, 0);
+    }
+    50% {
+        transform: scale(1);
+        color: rgb(6, 28, 196);
+     
+    }
+    100% {
+        transform: scale(0.9);
+        color: rgb(0, 0, 0);
+    }
+}
+
+.up-nam{
+  
+  margin: 3%;
+
+}
+
+
+
+.inputt{
+    overflow: hidden;
+    background-color: beige;
+    border-radius: 6px;
+    border: 2px solid black;
+    padding: 15px;
+    margin: 5px ;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 2px 2px 2px rgb(157, 44, 188);  
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border-radius: 8px;
+    border: 2px solid beige;
+    padding: 10px;
+    margin: 15px auto;
+    width: 50%;
+    height: 400%;
+    box-shadow: 2px 2px 3px rgb(53, 53, 53);
+    transition: all 0.2s ease-in-out;  
+}
+
+.btn:hover{
+    background-color: rgb(191, 15, 231);
+    color: white;
+    border-radius: 20px;
+    transform: scale(1.4);
+    transition: all 0.3s  ease-in-out;
+}
+
+
+.inst{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation: infiniteAnimation 3s infinite;
+}
+
+
+/* .result{
+    display: flex;
+    justify-content: center;
+    background-color: azure;
+    margin-top: 10%;
+    border: 2px solid black;
+    border-radius: 20px;
+} */
+
+
+.result{
+    
+    justify-content: center;
+    background-color: rgb(234, 234, 234);
+    margin: 100px auto;
+    width: 500px;
+    padding: 15px;
+    border: 2px solid black;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    transition: all 0.5s ease-in-out;
+}
+
+.output :hover{
+    transform: scale(1.1);
+    transition: all 0.5s ease-in-out;
+    box-shadow: 4px 5px 4px rgb(0, 0, 0);
+}
+
+.result strong,#nam,#add,#coon,#ac,#em,#sk{
+/* 
+    background-color: rgb(165, 224, 243);
+    padding: 10px;
+    border-radius: 10px;
+   */
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.result strong{
+    background-color:  rgb(163, 163, 163);
+    margin: 15px auto;
+    border: 1.5px solid black;
+    border-radius: 3px;
+    padding: 10px;
+  
+}
+
+.result b{
+    margin: 0% auto;
+}
+
+.output{
+    background-color: rgb(179, 186, 188);
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.dbun button{
+    background-color: rgb(63, 204, 235);
+    border-radius: 10px;
+}
+
+.dbun{
+display: flex;
+padding: 20px;
+border: 2px solid black;
+border-radius: 8px;
+background-color: rgb(128, 169, 224);
+margin: 15px;
+justify-content: center;
+align-items: center;
+transition: all 0.3s ease-in-out;
+}
+
+.dbun button:hover {
+transform: scale(1.3);
+background-color: rgb(30, 102, 235);
+color: white;
+border-radius: 30px;
+box-shadow: 3px 3px 5px rgb(0, 0, 0);
+
+}
